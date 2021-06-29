@@ -1,0 +1,100 @@
+kurento:
+  __name: KURENTO
+  __format: json
+
+# Values: ROUND_ROBIN or MEDIA_TYPE
+balancing-strategy: BALANCING_STRATEGY
+
+redisHost: REDIS_HOST
+redisPort: REDIS_PORT
+redisPassword: REDIS_PASSWORD
+
+clientHost: CLIENT_HOST
+
+mcs-port: MCS_PORT
+mcs-host: MCS_HOST
+mcs-address: MCS_ADDRESS
+
+freeswitch:
+    ip: FREESWITCH_CONN_IP
+    sip_ip: FREESWITCH_SIP_IP
+    port: FREESWITCH_SIP_PORT
+    esl_ip: ESL_IP
+    esl_port: ESL_PORT
+    esl_password: ESL_PASSWORD
+    handleExternalConnections:
+      __name: FS_HANDLE_EXT_CONN
+      __format: json
+    ipClassMappings:
+      __name: FREESWITCH_IP_MAPPINGS
+      __format: json
+
+log:
+  level: LOG_LEVEL
+  filename: LOG_FILENAME
+  stdout:
+    __name: LOG_STDOUT_ENABLED
+    __format: json
+
+recordWebcams:
+  __name: RECORD_WEBCAMS
+  __format: json
+recordScreenSharing:
+  __name: RECORD_SCREENSHARE
+  __format: json
+recordingMediaProfile: RECORDING_MEDIA_PROFILE
+recordingFormat: RECORDING_FORMAT
+
+modules:
+  __name: SFU_MODULES
+  __format: json
+
+conference-media-specs:
+  codec_video_main: CODEC_VIDEO_MAIN
+  codec_video_main_priority: CODEC_VIDEO_MAIN_PRIO
+  codec_video_content: CODEC_VIDEO_CONTENT
+  codec_video_content_priority: CODEC_VIDEO_CONTENT_PRIO
+  OPUS:
+    maxaveragebitrate: OPUS_MAX_AVERAGE_BITRATE
+
+videoSubscriberSpecSlave:
+  __name: VIDEO_SUBSCRIBER_SLAVE
+  __format: json
+screenshareSubscriberSpecSlave:
+  __name: SCREENSHARE_SUBSCRIBER_SLAVE
+  __format: json
+screensharePlayStartEnabled:
+  __name: SCREENSHARE_PLAY_START_ENABLED
+  __format: json
+screenshareServerSideAkkaBroadcast:
+  __name: SCREENSHARE_SERVER_AKKA_BROADCAST
+  __format: json
+
+kurentoAllowedCandidateIps:
+  __name: KURENTO_ALLOWED_CANDIDATE_IPS
+  __format: json
+
+kurentoAllowMDNSCandidates:
+  __name: KURENTO_ALLOW_MDNS
+  __format: json
+
+kurentoTrackIceStateChanges:
+  __name: KURENTO_TRACK_ICE_STATE_CHANGES
+  __format: json
+
+mediaThresholds:
+  global: GLOBAL_MEDIA_THRESHOLD
+  perRoom: ROOM_MEDIA_THRESHOLD
+  perUser: USER_MEDIA_THRESHOLD
+
+ejectOnUserLeft:
+  __name: EJECT_ON_USER_LEFT
+  __format: json
+
+permissionProbes:
+  __name: PERMISSION_PROBES
+  __format: json
+
+videoMediaServer: VIDEO_MEDIA_SERVER
+screenshareMediaServer: SCREENSHARE_MEDIA_SERVER
+audioMediaServer: AUDIO_MEDIA_SERVER
